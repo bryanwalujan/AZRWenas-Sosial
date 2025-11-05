@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class OrphanageContact extends Model
+class Need extends Model
 {
-    protected $fillable = ['orphanage_id', 'contact_name', 'phone', 'role'];
+    protected $fillable = ['orphanage_id', 'item', 'description'];
 
     public function orphanage()
     {
