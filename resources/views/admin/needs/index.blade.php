@@ -298,42 +298,6 @@
             @endif
         </div>
 
-        <!-- Quick Actions -->
-        <div class="mt-8 bg-white rounded-xl shadow-md overflow-hidden fade-in" style="animation-delay: 0.4s;">
-            <div class="gradient-bg px-6 py-4">
-                <h3 class="text-lg font-semibold text-white flex items-center">
-                    <i class="fas fa-bolt mr-2"></i>
-                    Akses Cepat
-                </h3>
-            </div>
-            <div class="p-6">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <a href="{{ route('admin.orphanages.index') }}" 
-                       class="flex flex-col items-center justify-center p-4 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition-all duration-300 card-hover">
-                        <i class="fas fa-arrow-left text-2xl mb-2"></i>
-                        <span class="text-sm font-medium">Kembali</span>
-                    </a>
-                    
-                    <a href="{{ route('admin.orphanages.needs.create', $orphanage) }}" 
-                       class="flex flex-col items-center justify-center p-4 bg-green-50 text-green-600 rounded-lg hover:bg-green-100 transition-all duration-300 card-hover">
-                        <i class="fas fa-plus-circle text-2xl mb-2"></i>
-                        <span class="text-sm font-medium">Tambah</span>
-                    </a>
-                    
-                    <a href="#" 
-                       class="flex flex-col items-center justify-center p-4 bg-orange-50 text-orange-600 rounded-lg hover:bg-orange-100 transition-all duration-300 card-hover">
-                        <i class="fas fa-print text-2xl mb-2"></i>
-                        <span class="text-sm font-medium">Cetak</span>
-                    </a>
-                    
-                    <a href="#" 
-                       class="flex flex-col items-center justify-center p-4 bg-purple-50 text-purple-600 rounded-lg hover:bg-purple-100 transition-all duration-300 card-hover">
-                        <i class="fas fa-share-alt text-2xl mb-2"></i>
-                        <span class="text-sm font-medium">Bagikan</span>
-                    </a>
-                </div>
-            </div>
-        </div>
     </main>
 
     <!-- Footer -->

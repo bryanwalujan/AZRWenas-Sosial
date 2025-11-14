@@ -104,6 +104,12 @@
                         <i class="fas fa-user-circle"></i>
                         <span>Administrator</span>
                     </div>
+                    <!-- Di bagian Quick Actions -->
+<a href="{{ route('admin.profile') }}"
+   class="flex flex-col items-center justify-center p-4 bg-indigo-50 text-indigo-600 rounded-lg hover:bg-indigo-100 transition-all duration-300 card-hover">
+    <i class="fas fa-user-cog text-2xl mb-2"></i>
+    <span class="text-sm font-medium">Profil Saya</span>
+</a>
                     <a href="{{ route('logout') }}" 
                        class="flex items-center space-x-2 bg-white bg-opacity-20 hover:bg-opacity-30 px-3 py-2 rounded-lg transition-all duration-300">
                         <i class="fas fa-sign-out-alt"></i>

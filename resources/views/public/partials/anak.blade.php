@@ -3,7 +3,7 @@
         <thead class="bg-gray-50">
             <tr>
                 <th class="px-4 py-2 text-left">Nama</th>
-                <th class="px-4 py-2 text-center">Umur</th>
+                <th class="px-4 py-2 text-center">Umur<br>(thn)</th>
                 <th class="px-4 py-2">Jenis Kelamin</th>
                 <th class="px-4 py-2">Status</th>
                 <th class="px-4 py-2">Pendidikan</th>

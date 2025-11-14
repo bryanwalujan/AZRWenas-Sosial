@@ -6,8 +6,8 @@ use App\Http\Controllers\Admin\InventoryController;
 use App\Http\Controllers\Admin\ChildController;
 use App\Http\Controllers\Admin\NeedController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Admin\ProfileController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
 
 // === HALAMAN PUBLIK ===
 Route::get('/', [PublicController::class, 'index'])->name('home');
@@ -18,8 +18,6 @@ Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
-Route::post('/register', [RegisterController::class, 'register']);
 
 // === DASHBOARD ADMIN ===
 Route::middleware(['auth'])->group(function () {
@@ -35,5 +33,11 @@ Route::middleware(['auth'])->group(function () {
             Route::resource('children', ChildController::class)->except(['show']);
             Route::resource('needs', NeedController::class)->except(['show']);
         });
+        Route::get('/profile', function () {
+        return view('admin.profile');
+    })->name('profile');
+
+    Route::put('/profile/email', [ProfileController::class, 'updateEmail'])->name('profile.email');
+    Route::put('/profile/password', [ProfileController::class, 'updatePassword'])->name('profile.password');
     });
 });
